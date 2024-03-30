@@ -1,0 +1,25 @@
+name: simply_kiosk_checkout
+version: 1.0.0+1
+publish_to: none
+description: A new Flutter project.
+environment:
+  sdk: '>=3.3.2 <4.0.0'
+
+dependencies:
+  cupertino_icons: ^1.0.6
+  flutter:
+    sdk: flutter
+  fullscreen_window: ^1.0.4
+  gap: ^3.0.1
+  get: 4.6.6
+  intl: ^0.19.0
+  wakelock_plus: ^1.1.6
+
+dev_dependencies:
+  flutter_launcher_icons: ^0.13.1
+  flutter_lints: ^3.0.0
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
