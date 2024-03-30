@@ -4,6 +4,7 @@ import 'package:gap/gap.dart';
 import 'package:get/get.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 
+import '../../../routes/app_pages.dart';
 import '../controllers/phone_sign_in_controller.dart';
 
 class PhoneSignInView extends GetView<PhoneSignInController> {
@@ -43,6 +44,7 @@ class PhoneSignInView extends GetView<PhoneSignInController> {
                 ),
                 itemBuilder: (context, index) {
                   return (buttons[index] == 'D')
+                      // delete
                       ? ElevatedButton(
                           onPressed: () {
                             final phonenumberLength =
@@ -57,13 +59,24 @@ class PhoneSignInView extends GetView<PhoneSignInController> {
                             Icons.backspace,
                             size: 32,
                           ))
+                      // enter number
                       : ElevatedButton(
                           onPressed: () {
                             final phonenumberLength =
                                 controller.phoneNumber.value.length;
+                            // insert number when less than 10 digits
                             if (phonenumberLength < 10) {
                               controller.phoneNumber.value =
                                   controller.phoneNumber.value + buttons[index];
+
+                              // auto verify when 10 digit
+                              if (controller.phoneNumber.value.length == 10) {
+                                // TODO : send SMS to verify
+
+                                // FIXME : mock verify
+                                controller.phoneNumber.value = '';
+                                Get.toNamed(Routes.VERIFY_CODE);
+                              }
                             }
                           },
                           child: Text(

@@ -8,10 +8,12 @@ import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/payment/bindings/payment_binding.dart';
 import '../modules/payment/views/payment_view.dart';
-import '../modules/phoneSignIn/bindings/phone_sign_in_binding.dart';
-import '../modules/phoneSignIn/views/phone_sign_in_view.dart';
+import '../modules/phone_signIn/bindings/phone_sign_in_binding.dart';
+import '../modules/phone_signIn/views/phone_sign_in_view.dart';
 import '../modules/thankyou/bindings/thankyou_binding.dart';
 import '../modules/thankyou/views/thankyou_view.dart';
+import '../modules/verify_code/bindings/verify_code_binding.dart';
+import '../modules/verify_code/views/verify_code_view.dart';
 
 part 'app_routes.dart';
 
@@ -56,6 +58,11 @@ class AppPages {
       page: () => const ThankyouView(),
       binding: ThankyouBinding(),
       transition: Transition.noTransition,
+    ),
+    GetPage(
+      name: _Paths.VERIFY_CODE,
+      page: () => const VerifyCodeView(),
+      binding: VerifyCodeBinding(),
     ),
   ];
 }
