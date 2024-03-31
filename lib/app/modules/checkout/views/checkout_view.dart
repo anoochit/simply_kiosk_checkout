@@ -24,7 +24,9 @@ class CheckoutView extends GetView<CheckoutController> {
               padding: const EdgeInsets.all(16.0),
               child: RoundedRectangleButtonView(
                 title: 'Credit / Debit Card',
-                onTap: () {},
+                onTap: () {
+                  // TODO : process checkout with credit card
+                },
               ),
             ),
             Container(
@@ -33,7 +35,9 @@ class CheckoutView extends GetView<CheckoutController> {
               padding: const EdgeInsets.all(16.0),
               child: RoundedRectangleButtonView(
                 title: 'Truemoney',
-                onTap: () {},
+                onTap: () {
+                  // TODO : process checkout with truemoney
+                },
               ),
             ),
             Container(
@@ -42,7 +46,9 @@ class CheckoutView extends GetView<CheckoutController> {
               padding: const EdgeInsets.all(16.0),
               child: RoundedRectangleButtonView(
                 title: 'Thai QR Payment',
-                onTap: () {},
+                onTap: () {
+                  // TODO : process checkout with thai qr payment
+                },
               ),
             ),
           ],

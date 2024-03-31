@@ -7,7 +7,7 @@ import '../../../routes/app_pages.dart';
 import '../controllers/verify_code_controller.dart';
 
 class VerifyCodeView extends GetView<VerifyCodeController> {
-  const VerifyCodeView({Key? key}) : super(key: key);
+  const VerifyCodeView({super.key});
   @override
   Widget build(BuildContext context) {
     final buttons = ['1', '2', '3', '4', '5', '6', '7', '8', '9', 'D', '0'];
