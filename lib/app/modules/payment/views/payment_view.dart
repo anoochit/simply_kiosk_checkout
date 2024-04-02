@@ -14,10 +14,7 @@ class PaymentView extends GetView<PaymentController> {
         centerTitle: true,
       ),
       body: const Center(
-        child: Text(
-          'PaymentView is working',
-          style: TextStyle(fontSize: 20),
-        ),
+        child: Text('PaymentView is working'),
       ),
     );
   }
